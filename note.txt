@@ -1,0 +1,46 @@
+1) create package.json file using - npm init
+2) create nodemodules - install express -npm i express
+3)  create index.js file 
+4) import express inside index.js  ie :const express=require('express')  //import express 
+
+5) we built an application using express ie const app=express() //create application using express
+6) we setup a port number ie: 
+                  app.listen(3000,()=>{
+                   console.log('listening to port 3000');
+                                      })
+
+7) we parse the request ie to convert json to js
+    //to parse the request
+    app.use(express.json())
+
+8)to connect frontend and backend we installed cors :npm i cors
+9)import cors in index.js
+10)using cors specify origin to the server (integration)  ie: defined the path of frontend
+       app.use(cors({
+      origin:'http://localhost:4200'
+       }))
+  
+ 11) api fetch - fakestoreapi/products
+
+ 12)created db and collection in mongodb
+ 13)install mongoose to setup connection between server and mongodb
+ 14)npm i mongoose
+ 15)create a folder named services
+       2 files * dataService.js * dbjs
+
+ 16) in db.js we imported mongoose to establish the connection ie we type all the things related to mongodb
+ 17) define connection string in db.js
+ 18) create  model and schema in db.js
+ 19) export model  
+
+20) import db in dataService.js  create a function and export it.
+ ie.
+
+      module.exports={
+    Product
+    } 
+
+21)resolving api request in index.js
+  index+dataService
+  node+mongodb conncetion successsful
+
